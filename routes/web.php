@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ProdukController;
+
+use App\Http\Controllers\MahasiswaController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -77,3 +81,13 @@ Route::fallback(function(){
         );
 
 });
+
+Route::resource('produk', ProdukController::class); // 7 route CRUD sekaligus
+
+Route::get('/profil',
+    [MahasiswaController::class, 'profil']
+)->name('mahasiswa.profil');
+
+Route::get('/mahasiswa',
+    [MahasiswaController::class, 'daftar']
+)->name('mahasiswa.index');
