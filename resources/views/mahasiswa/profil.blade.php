@@ -1,13 +1,29 @@
-<h1>Profil Mahasiswa</h1>
+@extends('layouts.app')
+
+
+@section('title','Profil Mahasiswa')
+
+
+@section('content')
+
+
+<h2>Profil Mahasiswa</h2>
+
 
 <p>
-    Nama : {{ $nama }}
+Nama : {{ $nama }}
 </p>
 
-<p>
-    NIM : {{ $nim }}
-</p>
 
 <p>
-    Prodi : {{ $prodi }}
+NIM : {{ $nim }}
 </p>
+
+
+<p>
+Prodi : {{ $prodi }}
+</p>
+
+
+
+@endsection
